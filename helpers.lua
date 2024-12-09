@@ -45,4 +45,13 @@ function helpers.read_range(input, start, stop)
   return table.concat(text, '')
 end
 
+function helpers.is_in_list(list, value)
+  for _, val in pairs(list) do
+      if val == value then
+          return true
+      end
+  end
+  return false
+end
+
 return helpers
